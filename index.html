@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust Elytra Client - 专为3c3u优化的鞘翅飞行模组</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <style>
+        .minecraft-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5; /* 根据图片调整透明度 */
+            background-image: url('/minecraft-bg.jpg'); /* 修改这里 */
+            background-size: cover; /* 使图片覆盖整个区域 */
+            background-position: center; /* 图片居中 */
+            background-repeat: no-repeat; /* 不重复图片 */
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="minecraft-bg"></div>
+    <div class="container header-content">
+        <div class="logo">
+            <i class="fas fa-rocket logo-icon"></i>
+            <div class="logo-text">
+                <h1>Rust Elytra Client</h1>
+                <div class="tagline">专为Minecraft 3c3u优化的鞘翅飞行模组</div>
+            </div>
+        </div>
+        <p style="font-size: 1.2rem; max-width: 800px; margin-bottom: 3rem;">
+            优化Baritone的下界鞘翅飞行，实现24小时自动挂机飞行，完全免费、开源且安全！
+        </p>
+    </div>
+</header>
+
+<main class="container">
+    <!-- 安全通知 -->
+    <div class="safety-notice">
+        <i class="fas fa-shield-alt"></i>
+        <div>
+            <strong>完全安全开源</strong> - 无后门、无混淆，源代码已在GitHub开放，社区可验证！
+        </div>
+    </div>
+    <!-- 核心功能 -->
+    <section>
+        <h2 class="section-title"><i class="fas fa-star"></i>核心功能</h2>
+        <div class="core-features">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                <h3 class="feature-title">24小时自动飞行</h3>
+                <p>优化Baritone的下界鞘翅飞行算法，实现全天候自动挂机飞行，无需人工干预。</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-box-open"></i></div>
+                <h3 class="feature-title">自动补给系统</h3>
+                <p>自动从末影箱中拿取烟花和鞘翅补给，确保长途飞行不会因资源耗尽而中断。</p>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-desktop"></i></div>
+                <h3 class="feature-title">简易GUI界面</h3>
+                <p>用户友好的图形界面，便于操作和配置飞行参数，无需记忆复杂命令。</p>
+            </div>
+        </div>
+    </section>
+    <section class="screenshots-section">
+        <h2 class="section-title"><i class="fas fa-images"></i>模组截图展示</h2>
+
+        <div class="screenshot-container">
+            <!-- 左箭头 -->
+            <button class="screenshot-arrow screenshot-arrow-left" aria-label="上一张">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <!-- 截图轮播区域 -->
+            <div class="screenshot-carousel">
+                <!-- 截图将通过JavaScript动态加载 -->
+                <div class="screenshot-slide active">
+                    <img src="" alt="Rust Elytra Client截图" class="screenshot-image">
+                    <div class="screenshot-caption">正在加载截图...</div>
+                </div>
+            </div>
+
+            <!-- 右箭头 -->
+            <button class="screenshot-arrow screenshot-arrow-right" aria-label="下一张">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- 指示器 -->
+            <div class="screenshot-indicators">
+                <!-- 指示器将通过JavaScript动态生成 -->
+            </div>
+        </div>
+
+        <div class="screenshot-info">
+            <p><i class="fas fa-info-circle"></i> 截图展示Rust Elytra Client的实际使用界面和功能展示</p>
+        </div>
+    </section>
+    <!-- 安全特性 -->
+    <section>
+        <h2 class="section-title"><i class="fas fa-user-shield"></i>安全处理系统</h2>
+        <div class="safety-features">
+            <p style="margin-bottom: 20px;">模组内置多重安全机制，确保您的角色在3c3u的恶劣环境中安全飞行：</p>
+
+            <div class="safety-list">
+                <div class="safety-item">
+                    <i class="fas fa-fire safety-icon"></i>
+                    <div>
+                        <h3>岩浆逃脱</h3>
+                        <p>掉入岩浆时自动启动逃脱程序，最大限度减少伤害。</p>
+                    </div>
+                </div>
+
+                <div class="safety-item">
+                    <i class="fas fa-running safety-icon"></i>
+                    <div>
+                        <h3>触地恢复</h3>
+                        <p>意外触地停止飞行时，自动起跳重新开始飞行。</p>
+                    </div>
+                </div>
+
+                <div class="safety-item">
+                    <i class="fas fa-map-signs safety-icon"></i>
+                    <div>
+                        <h3>Baritone错误处理</h3>
+                        <p>自动识别Baritone寻路错误并重置状态，确保路径计算正常。</p>
+                    </div>
+                </div>
+
+                <div class="safety-item">
+                    <i class="fas fa-power-off safety-icon"></i>
+                    <div>
+                        <h3>自动安全退出</h3>
+                        <p>遇到无法处理的危险情况时自动退出游戏，避免角色死亡。</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="warning">
+                <div class="warning-title">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span>请注意</span>
+                </div>
+                <p>3c3u服务器环境复杂，尽管本模组提供了多重安全机制，但无法保证100%安全。建议在重要飞行前进行测试，并定期检查角色状态。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 开源信息 -->
+    <section>
+        <h2 class="section-title"><i class="fab fa-github"></i>开源与安全</h2>
+        <div class="opensource-info">
+            <p>Rust Elytra Client 完全开源，代码透明，无任何隐藏后门或恶意功能：</p>
+
+            <div style="margin: 25px 0; font-size: 1.2rem;">
+                <i class="fas fa-code" style="color: var(--primary-color); margin-right: 10px;"></i>
+                <strong>无混淆代码</strong> - 所有代码清晰可读，便于审查
+            </div>
+
+            <div style="margin: 25px 0; font-size: 1.2rem;">
+                <i class="fas fa-lock-open" style="color: var(--safe-color); margin-right: 10px;"></i>
+                <strong>无后门</strong> - 不收集任何用户数据，不发送任何隐私信息
+            </div>
+
+            <a href="https://github.com/c4R0D/RST-elytra" class="github-link" target="_blank">
+                <i class="fab fa-github"></i> 查看GitHub源代码
+            </a>
+        </div>
+    </section>
+
+    <!-- 版本和支持 -->
+    <section>
+        <h2 class="section-title"><i class="fas fa-gamepad"></i>版本与兼容性</h2>
+        <div class="version-info">
+            <div class="version-card">
+                <h3 class="version-title"><i class="fas fa-check-circle"></i>计划支持的Minecraft版本</h3>
+                <ul class="version-list">
+                    <li>Minecraft 1.21.1</li>
+                    <li>Minecraft 1.21.4</li>
+                    <li>Minecraft 1.21.8</li>
+                </ul>
+            </div>
+
+            <div class="version-card">
+                <h3 class="version-title"><i class="fas fa-cube"></i>依赖模组</h3>
+                <ul class="version-list">
+                    <li><strong>Baritone</strong> - 路径查找与自动化</li>
+                    <li>Fabric + Fabric API</li>
+                </ul>
+            </div>
+
+            <div class="version-card">
+                <h3 class="version-title"><i class="fas fa-calendar-alt"></i>发布计划</h3>
+                <ul class="version-list">
+                    <li><strong>1.0版本</strong> - 计划于1月末发布</li>
+                    <li>后续更新将根据社区反馈持续优化</li>
+                    <li>更多安全情况处理持续添加中</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系和发布 -->
+    <section>
+        <h2 class="section-title"><i class="fas fa-info-circle"></i>联系与获取</h2>
+        <div class="contact-release">
+            <div class="contact-card">
+                <h3 class="version-title"><i class="fas fa-comments"></i>联系与支持</h3>
+                <p>有关模组的问题、建议或反馈，请通过以下方式联系：</p>
+
+                <div class="qq-contact">
+                    <i class="fab fa-qq qq-icon"></i>
+                    <div>
+                        <strong>QQ: 3209297676</strong><br>
+                        <small>RSTminecraft</small>
+                    </div>
+                </div>
+
+                <p style="margin-top: 15px;">您也可以通过GitHub提交问题或参与开发。</p>
+            </div>
+
+            <div class="release-card">
+                <h3 class="version-title"><i class="fas fa-download"></i>获取模组</h3>
+                <p>1.0版本发布后，您可以通过以下方式获取：</p>
+                <ul class="version-list" style="margin-top: 15px;">
+                    <li><i class="fas fa-external-link-alt"></i> GitHub Releases页面</li>
+                    <li><i class="fas fa-envelope"></i> QQ群文件分享</li>
+                    <li><i class="fas fa-share-alt"></i> 社区推荐下载源</li>
+                </ul>
+
+                <div class="warning" style="margin-top: 20px;">
+                    <p><i class="fas fa-exclamation-circle"></i> 请仅从官方或可信来源下载，避免使用第三方修改版本。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>Rust Elytra Client - 专为Minecraft 3c3u服务器设计的鞘翅飞行优化模组</p>
+        <p style="margin-top: 10px; color: #aaa; font-size: 0.9rem;">
+            本模组为开源项目，与Mojang Studios、3c3u服务器无官方关联。使用模组时请遵守服务器规则。
+        </p>
+        <p style="margin-top: 15px; color: #777; font-size: 0.8rem;">
+            © 2023 RSTminecraft | GitHub: c4R0D
+        </p>
+    </div>
+</footer>
+
+<script>
+    // 简单交互效果
+    document.addEventListener('DOMContentLoaded', function() {
+        // 为所有卡片添加点击效果
+        const cards = document.querySelectorAll('.feature-card, .safety-item, .version-card');
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    this.style.transform = '';
+                }, 150);
+            });
+        });
+
+        // GitHub链接悬停效果
+        const githubLink = document.querySelector('.github-link');
+        if(githubLink) {
+            githubLink.addEventListener('mouseenter', function() {
+                this.innerHTML = '<i class="fab fa-github"></i> 前往GitHub仓库';
+            });
+            githubLink.addEventListener('mouseleave', function() {
+                this.innerHTML = '<i class="fab fa-github"></i> 查看GitHub源代码';
+            });
+        }
+
+
+        const countdownElement = document.createElement('div');
+        countdownElement.style.cssText = 'background: rgba(240, 160, 32, 0.1); padding: 10px; border-radius: 5px; margin-top: 15px; text-align: center;';
+        countdownElement.innerHTML = `<strong>1.0版本发布预计时间:</strong> 一月末`;
+
+        const releaseCard = document.querySelector('.release-card');
+        if(releaseCard) {
+            releaseCard.appendChild(countdownElement);
+        }
+    });
+</script>
+<script src="screenshot.js">
+</script>
+</body>
+</html>
